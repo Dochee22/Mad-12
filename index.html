@@ -1,78 +1,54 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#11100f">
-  <meta name="description" content="MAD12 — parfums, beauté, mode féminine et senteurs.">
-  <title>MAD12 — Le détail fait la différence</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <script defer src="/app.js"></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="MAD12 — sélection mode, beauté et lifestyle.">
+  <title>MAD12 — Boutique</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">MAD12 · Une sélection. Plusieurs façons d'affirmer son style.</div>
+  <div class="announcement">MAD12 — L'identité avant le reste</div>
   <header class="site-header">
-    <a class="wordmark" href="/" aria-label="MAD12 accueil">MAD<span>12</span></a>
-    <nav class="desktop-nav" aria-label="Navigation principale">
-      <a href="#univers">Nos univers</a><a href="#selection">La sélection</a><a href="#about">MAD12</a>
-    </nav>
-    <a class="header-link" href="#selection">Explorer <span aria-hidden="true">↗</span></a>
+    <a class="brand" href="./" aria-label="MAD12 accueil">MAD<span>12</span></a>
+    <nav><a href="#catalogue">Boutique</a><a href="#univers">Nos univers</a><a href="#footer">Contact</a></nav>
+    <button class="cart-trigger" id="cartOpen" aria-label="Ouvrir le panier">PANIER <span id="cartCount">0</span></button>
   </header>
-
   <main>
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">L'ART DU CHOIX · MAD12</p>
-        <h1>Le détail<br>fait la <em>différence.</em></h1>
-        <p class="hero-text">Parfums, beauté, mode et senteurs. Des essentiels choisis pour celles et ceux qui savent ce qu'ils veulent.</p>
-        <a class="primary-button" href="#univers">Découvrir les univers <span>↗</span></a>
+      <div class="hero-copy"><p class="eyebrow">L'ESSENTIEL, AUTREMENT</p><h1>Ton style.<br><em>Tes règles.</em></h1>
+        <p>Mode, beauté et senteurs. Une sélection qui affirme l'identité, sans en faire trop.</p>
+        <a class="button button-light" href="#catalogue">Explorer la boutique</a>
       </div>
-      <div class="hero-art" aria-label="Composition abstraite aux tons sable et noir">
-        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="art-stone"></div><div class="art-caption">MAD12<br><span>EST. IN STYLE</span></div>
-      </div>
-      <div class="hero-index">01 / 04</div>
+      <div class="hero-art" aria-hidden="true"><div class="hero-mark">M<br>12</div><span>MAKE<br>YOUR<br>MARK</span></div>
     </section>
-
-    <section class="section categories" id="univers">
-      <div class="section-heading">
-        <div><p class="eyebrow">TROUVE TON UNIVERS</p><h2>Une identité.<br><em>Quatre univers.</em></h2></div>
-        <p class="section-note">Explore une sélection qui évoluera au fil des arrivages.</p>
-      </div>
-      <div class="category-grid">
-        <a class="category-card cat-perfume" href="#selection"><span class="cat-number">01</span><div><h3>Parfumerie</h3><p>Parfums · Brumes · Huiles</p></div><span class="cat-arrow">↗</span></a>
-        <a class="category-card cat-beauty" href="#selection"><span class="cat-number">02</span><div><h3>Beauté</h3><p>Mèches · Accessoires</p></div><span class="cat-arrow">↗</span></a>
-        <a class="category-card cat-fashion" href="#selection"><span class="cat-number">03</span><div><h3>Mode féminine</h3><p>Tenues · Sacs · Accessoires</p></div><span class="cat-arrow">↗</span></a>
-        <a class="category-card cat-home" href="#selection"><span class="cat-number">04</span><div><h3>Senteurs</h3><p>Maison · Bougies · Diffuseurs</p></div><span class="cat-arrow">↗</span></a>
+    <section id="univers" class="univers section-wrap">
+      <div class="section-heading"><p class="eyebrow">TROUVE TON UNIVERS</p><h2>Une sélection. Plusieurs facettes.</h2></div>
+      <div class="universe-grid">
+        <a href="#catalogue" data-category="Mode"><span>01 / MODE</span><b>Affirme<br>ton allure.</b></a>
+        <a href="#catalogue" data-category="Beauté"><span>02 / BEAUTÉ</span><b>Les détails<br>font la différence.</b></a>
+        <a href="#catalogue" data-category="Senteurs"><span>03 / SENTEUR</span><b>Laisse<br>ta signature.</b></a>
       </div>
     </section>
-
-    <section class="selection section" id="selection">
-      <div class="section-heading compact">
-        <div><p class="eyebrow">À DÉCOUVRIR</p><h2>La sélection <em>MAD12.</em></h2></div>
-        <span class="coming-label">CATALOGUE EN PRÉPARATION</span>
+    <section id="catalogue" class="catalogue section-wrap">
+      <div class="section-heading catalogue-heading"><div><p class="eyebrow">LA SÉLECTION MAD12</p><h2>À découvrir.</h2></div>
+        <label class="search"><span class="sr-only">Rechercher un produit</span><input id="searchInput" type="search" placeholder="Rechercher…"></label>
       </div>
-      <div id="product-area" class="empty-catalogue">
-        <div class="empty-mark">M<span>12</span></div>
-        <h3>La sélection arrive.</h3>
-        <p>Les premiers articles seront présentés ici dès que leurs informations et leur disponibilité seront confirmées.</p>
-      </div>
-    </section>
-
-    <section class="manifesto" id="about">
-      <p class="eyebrow">L'ESPRIT MAD12</p>
-      <h2>Pas besoin d'en faire trop.<br><em>Le choix parle.</em></h2>
-      <p>Une boutique en mouvement, pensée pour réunir style, beauté et sens du détail.</p>
+      <div id="categoryFilters" class="filters"><button class="filter active" data-category="all">Tout</button></div>
+      <div id="productGrid" class="product-grid"><p class="state-message">Chargement du catalogue…</p></div>
+      <p id="catalogueNote" class="small-note">Les articles affichés dépendent du catalogue réellement publié.</p>
     </section>
   </main>
+  <footer id="footer"><a class="brand" href="#">MAD<span>12</span></a><p>Une identité. Pas un uniforme.</p><small>© <span id="year"></span> MAD12</small></footer>
 
-  <footer class="site-footer">
-    <a class="wordmark" href="/">MAD<span>12</span></a>
-    <p>Le détail fait la différence.</p>
-    <span>© <span id="year"></span> MAD12</span>
-  </footer>
-</body>
-</html>
+  <div id="cartPanel" class="cart-panel" aria-hidden="true">
+    <div class="cart-top"><h2>Ton panier</h2><button id="cartClose" class="icon-button" aria-label="Fermer">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="state-message">Ton panier est vide.</p></div>
+    <div class="cart-bottom"><div class="total-line"><span>Total indicatif</span><strong id="cartTotal">0 FCFA</strong></div>
+      <p class="small-note">Le total définitif et la disponibilité doivent être confirmés avant paiement.</p>
+      <button id="checkoutButton" class="button button-dark" disabled>Continuer</button>
+    </div>
+  </div>
+  <div id="scrim" class="scrim"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>
